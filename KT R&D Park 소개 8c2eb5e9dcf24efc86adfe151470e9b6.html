@@ -1,0 +1,695 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>KT R&amp;D Park 소개</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8c2eb5e9-dcf2-4efc-86ad-fe151470e9b6" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🎮</span></div><h1 class="page-title">KT R&amp;D Park 소개</h1></header><div class="page-body"><div id="afb4d34a-c618-40ab-9ecb-38c8a739e525" class="column-list"><div id="caf9cc96-b56d-4bfa-a46b-b592bfa98b1f" style="width:81.25%" class="column"><h1 id="87025f25-f8f3-48f9-b7f7-9f584ccb7712" class="">융합기술원만의 메타버스, KT R&amp;D Park입니다 </h1><blockquote id="04bb870d-05a7-41a4-be5f-8204c793bb1f" class="">AI2XL 연구소에서 개발중인 ‘지니버스’에 융합기술원 우면사옥을 트윈하여 부캐로 참여할 수 있는 가상의 공간입니다. 조직문화 활성화 방안으로 제안된 본 프로젝트는 회의실 예약, 임직원 자리 찾기, 개인/팀 대항 게임 등 KT 융합기술원 임직원이 편하게 쉴 수 있도록 항상 노력하겠습니다. </blockquote><p id="1fb83ebf-3bd8-4ad1-a835-99bcbdc38ab8" class="">
+</p></div><div id="fa20bc3d-f5a2-4b29-9aee-649d6494f961" style="width:18.75000000000004%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="db2300ab-9124-4de0-b1b0-898df0ae2820"><div style="font-size:1.5em"><span class="icon">🌌</span></div><div style="width:100%"><a href="https://genieverse.placeb.com/build/aos"><mark class="highlight-blue"><strong>안드로이드앱 다운로드</strong></mark></a></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="00155045-06be-4884-81e4-99d964423066"><div style="font-size:1.5em"><span class="icon">🍎</span></div><div style="width:100%"><a href="https://genieverse.placeb.com/build/ios"><mark class="highlight-blue"><strong>iOS 앱 다운로드</strong></mark></a></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="32ccb0d0-2b0e-41cd-a3bc-c098a9117ad4"><div style="font-size:1.5em"><span class="icon">📍</span></div><div style="width:100%"><a href="https://www.notion.so/Wiki-KT-R-D-Park-656fbbf0cf0e4b3baabae820281a6298"><span class="icon">📰</span>[Wiki] KT R&amp;D Park</a> </div></figure></div></div><figure id="f68cb3da-9435-4518-91b5-35122eb59a1e" class="image"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/Untitled.png"><img style="width:1625px" src="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/Untitled.png"/></a></figure><h1 id="0752c84f-337b-4d3b-9dd1-2f2f840c2136" class="">KT R&amp;D Park는</h1><hr id="fe802cc8-bf08-48ff-ae65-fd853f93d09a"/><div id="61b67d23-fa70-45a7-8f3c-bafcf6c6fecc" class="column-list"><div id="e9d19d7e-08e1-4f56-a784-16990661c4e3" style="width:33.33333333333333%" class="column"><h3 id="2925584b-5aab-45ac-9552-96cb871b5b5e" class="">👬 Twin-Office</h3><p id="0460128b-f912-4cac-b725-4add9eb072c3" class="">우면사옥 일대를 메타버스로 그대로 옮겼습니다.</p><p id="e785f751-9652-4fd8-8f74-fbd9a2467c31" class="">임직원 자리 찾기, 회의실 예약 등 간단한 업무를 지원합니다!</p><p id="526469e5-f0ff-4bed-900c-0c66917938b4" class="">
+</p></div><div id="67657cb9-d475-4919-a7da-54b8d86742a1" style="width:33.33333333333333%" class="column"><h3 id="2b51d065-d11f-4918-aff2-711a6852b892" class="">💬Casual Communication</h3><p id="bd4c885f-fc88-4b64-b095-9d33fe16329b" class="">재미있고 자유로운 소통을 지향합니다.</p><p id="80ae7780-e387-48d0-827b-1e2c0a41b3aa" class="">비밀의방, R&amp;D PLAY를 통해 다양한 주제로 이야기해봐요!</p></div><div id="2e3f49a8-a323-4a04-b80d-40d5da0fea6b" style="width:33.33333333333333%" class="column"><h3 id="78348599-71df-4517-8fb7-b9e0e44282d2" class="">🕹️ Game-Zone</h3><p id="05ed1ead-6d52-48cf-aec4-4ba125b314b9" class="">자연스럽게 친해질 수 있는 기회를 제공합니다.</p><p id="1765147b-e075-42f1-901d-2b233151ec75" class="">개인/팀 대항 게임을 즐겨보세요!</p></div></div><h1 id="5a42d7d3-9be1-43c6-93a4-ef9b3248b092" class="">핵심 기능</h1><div id="8fb73374-5a09-4c19-a4b4-5ed270e807ac" class="column-list"><div id="ed3bc069-b0d6-4d0e-991f-86dda2713349" style="width:50%" class="column"><figure id="ab7a2685-39a4-42d8-ab7f-42b2c981138a" class="image"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/img_tugofwar_screen_023x.png"><img style="width:1428px" src="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/img_tugofwar_screen_023x.png"/></a></figure></div><div id="9590499d-e457-4dde-8314-77753a724229" style="width:49.99999999999999%" class="column"><blockquote id="d56fc2d0-f77d-441b-aff0-625ea7cb66c9" class="">GAME-ZONE</blockquote><p id="cc98363c-5b35-4ffd-ba56-c7418758de50" class="">요가의 고전인 &lt;요가수트라&gt;의 사상을 중심으로 하는 요가이다. 이 유파에서는 인간의 고뇌는 마음 작용이 원인이라고 보고 심리적인 조작을 통하여 고뇌로부터 벗어나고자 한다. 그러나 현재 일어나는 의식현상은 과거에 형성되어 잠재된 것이 작용하는 것이므로 잠재된 의식이 있는 한 고뇌는 지속된다고 본다. 이 잠재 의식을 억제하는 방법이 하나의 대상에 정신을 집중하는 명상이다. 이러한 방법에 의해서 산만한 의식이 억제되고 지혜가 나타나서 진정한 자아를 깨닫게 된다. </p><p id="aa4adc02-b651-4e56-9b02-6e8e77911e54" class="">
+</p><p id="077e263b-be9d-4116-9c86-8eb9bade6e89" class="">
+</p></div></div><hr id="6826cfd1-311b-4fac-a171-a3824bdef6b9"/><p id="22868910-467c-472b-8ed2-05a1fe9391fc" class="">
+</p><div id="998a48a0-3b49-40b2-8137-15cf62fd8c3d" class="column-list"><div id="48ff8677-f2d1-4162-9737-82852bce5168" style="width:50%" class="column"><blockquote id="0ec2b804-c4bd-43a8-83fe-8dd37630d8a9" class=""><strong>비밀의 방</strong></blockquote><p id="f2efcd01-1706-4101-a36b-795a1f1c01a6" class="">&lt;바가바드기타&gt;의 사상에 근원을 둔 요가이다. 이 유파에서는 현실의 고뇌를 무지 때문이라고 보고 바른 지식(즈나나)을 얻기 위한 철학적 지식의 습득과 철학적 사색을 수행의 중심으로 한다. 여기서 요구하는 지식은 분석적인 과학 지식이 아닌 총체적이고 직관적인 인식 작용에 의한 지혜이다. 즈나나 요가의 목표는 이러한 지혜에 의해 현상적 자아와는 다른 영원한 정신성으로서의 진정한 자아를 발견하고 이 자아를 구현하는 것이다. 이 철학적 요가는 초월적인 지혜에 의해서 해탈하고자 하는 인도철학의 일반적인 특징이기도 하다.</p></div><div id="bc7cc519-cc22-42a2-a204-3df68b76e667" style="width:50%" class="column"><figure id="c44fc3e3-d951-4ae4-adf2-eec58770c96c" class="image"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/Untitled%201.png"><img style="width:1625px" src="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/Untitled%201.png"/></a></figure><p id="0824a11c-1348-4dc5-a96b-4a144772cb1f" class="">
+</p></div></div><hr id="5028f76d-f18f-4cb8-9a43-6dfdee6f9158"/><p id="ca04703b-fd98-4db3-a1d0-d9df28ddd1d1" class="">
+</p><div id="f9e79425-0d7d-4e8b-a0a2-320e7f07b86b" class="column-list"><div id="132c2479-5533-406e-a2eb-9c18f29fdfb9" style="width:50%" class="column"><figure id="c41bd5e3-4563-45c0-8ec1-16b8ab2ad1ca" class="image"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/Untitled%202.png"><img style="width:1625px" src="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/Untitled%202.png"/></a></figure></div><div id="2b9a7f14-5ddf-4990-9cac-fd4aa27b413a" style="width:50%" class="column"><blockquote id="d751eca4-11d0-4772-b4b3-1be59a5ba2ba" class=""><strong>R&amp;D PLAY</strong></blockquote><p id="b9345a77-00e9-44e1-92ad-2547b9794b74" class="">&lt;바가바드기타&gt;의 사상에 근원을 둔 요가이다. 이 유파에서는 자신의 신분이나 고뇌 등은 과거에 행한 행위(카르마業)의 결과(業報)라고 보고행위는 그것이 아무리 올바르다고 할지라도 업보가 따르기 때문에 윤회한다고 본다. 그러나 업보는 행위 그 차체가 아니라 그 결과를 기대하는 욕망에 의한 것이다. 따라서 행위의 동기나 그 결과에 대한 욕망을 포기하면 업보가 없다. 무집착적인 행위로 자신에게 주어진 의무를 완수함으로써 과거의 업을 소멸시키고 또 다른 업을 쌓지 않게 하는 실천이 이 요가이다. 이 실천적인 요가는 인도의 사회 제도와 윤리 속에 잘 나타나 있다.</p></div></div><hr id="41c66df6-ca39-4474-b811-a2f3d56becae"/><p id="89eb6b3d-1783-4e00-b875-4b66e93233ae" class="">
+</p><div id="993c0595-3430-4962-825c-92db0ce89e40" class="column-list"><div id="45b255a0-6777-4933-bf51-6eaa3c5a0af3" style="width:50%" class="column"><blockquote id="08c0661e-06fd-4b22-98d1-ad9a4b62859f" class=""><strong>회의실 예약 (23’1Q 적용 예정)</strong></blockquote><p id="5c6a1817-a6a5-458a-b33c-04da04dc5270" class="">밀교적인 하타 요가로서 인간을 하나의 소우주로 간주하는 사상이다. 인체 내에는 샤크티라고 하는 신비한 힘이 있는데 시바 신의 배우자로서 쿤달리니라고도 한다. 이것은 우주를 움직이는 에너지이며 동시에 개인의 생명을 유지하는 힘이다.그러나 그 힘을 발휘하지 못하고 항문 쪽에서 졸고 있는 암뱀이나 꺼질 듯한 불씨와 같다. 이것을 일깨워서 모든 인간의 장애를 태워버리고그 남편인 시바와 하나가 되게 하는 것이 이 요가의 목적이다. 이 행법에는 하타 요가와 같은 육체적 수행법과 주문과 같은 밀교적인 수행법이 포함되에 있다.</p><p id="bb3f4940-a7df-498c-9b1d-aed5ed8dccc6" class="">
+</p><p id="70d55d17-03a1-42ce-a666-a283acd5b19a" class="">
+</p></div><div id="137a82fc-65fe-4873-94fc-f6022074b153" style="width:50%" class="column"><figure id="e42d83aa-7a7f-44c7-8b6c-36a03fa8ed5b" class="image"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/Untitled%203.png"><img style="width:1154px" src="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/Untitled%203.png"/></a></figure><p id="b548d6e1-86f7-4043-ab06-a5f6b2811fb5" class="">
+</p></div></div><hr id="9b3d8000-dcdc-477e-8980-44fb8d4e3468"/><h1 id="18acce18-3550-49d0-827d-bf0b690dc252" class="">시간표 </h1><div id="061789c0-81b8-4156-8bb2-433a38e7524c" class="collection-content"><h4 class="collection-title">시간표</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>시간</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesSelect"><path d="M7,13 C10.31348,13 13,10.31371 13,7 C13,3.68629 10.31348,1 7,1 C3.68652,1 1,3.68629 1,7 C1,10.31371 3.68652,13 7,13 Z M3.75098,5.32278 C3.64893,5.19142 3.74268,5 3.90869,5 L10.09131,5 C10.25732,5 10.35107,5.19142 10.24902,5.32278 L7.15771,9.29703 C7.07764,9.39998 6.92236,9.39998 6.84229,9.29703 L3.75098,5.32278 Z"></path></svg></span>상태</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesSelect"><path d="M7,13 C10.31348,13 13,10.31371 13,7 C13,3.68629 10.31348,1 7,1 C3.68652,1 1,3.68629 1,7 C1,10.31371 3.68652,13 7,13 Z M3.75098,5.32278 C3.64893,5.19142 3.74268,5 3.90869,5 L10.09131,5 C10.25732,5 10.35107,5.19142 10.24902,5.32278 L7.15771,9.29703 C7.07764,9.39998 6.92236,9.39998 6.84229,9.29703 L3.75098,5.32278 Z"></path></svg></span>요가종류</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesSelect"><path d="M7,13 C10.31348,13 13,10.31371 13,7 C13,3.68629 10.31348,1 7,1 C3.68652,1 1,3.68629 1,7 C1,10.31371 3.68652,13 7,13 Z M3.75098,5.32278 C3.64893,5.19142 3.74268,5 3.90869,5 L10.09131,5 C10.25732,5 10.35107,5.19142 10.24902,5.32278 L7.15771,9.29703 C7.07764,9.39998 6.92236,9.39998 6.84229,9.29703 L3.75098,5.32278 Z"></path></svg></span>티쳐</th></tr></thead><tbody><tr id="02a7aaf5-2263-4183-b777-0ae6bec61d82"><td class="cell-title"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%AB%E1%84%91%E1%85%AD%20061789c081b841568bb2433a38e7524c/10%2000-11%2000%2002a7aaf522634183b7770ae6bec61d82.html">10:00-11:00</a></td><td class="cell-qK&lt;;"><span class="selected-value select-value-color-yellow">월요일</span></td><td class="cell-DXvv"><span class="selected-value select-value-color-yellow">마인드풀 요가</span></td><td class="cell-WwWx"><span class="selected-value select-value-color-default">헤주</span></td></tr><tr id="04a09e60-433d-4eae-b409-4fd7d6c6cee8"><td class="cell-title"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%AB%E1%84%91%E1%85%AD%20061789c081b841568bb2433a38e7524c/11%2000-12%2000%2004a09e60433d4eaeb4094fd7d6c6cee8.html">11:00-12:00</a></td><td class="cell-qK&lt;;"><span class="selected-value select-value-color-yellow">월요일</span></td><td class="cell-DXvv"><span class="selected-value select-value-color-pink">아쉬탕가요가</span></td><td class="cell-WwWx"><span class="selected-value select-value-color-default">헤주</span></td></tr><tr id="b83d494e-e982-4b78-928f-5c6cbe0e8264"><td class="cell-title"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%AB%E1%84%91%E1%85%AD%20061789c081b841568bb2433a38e7524c/11%2000-12%2000%20b83d494ee9824b78928f5c6cbe0e8264.html">11:00-12:00</a></td><td class="cell-qK&lt;;"><span class="selected-value select-value-color-yellow">월요일</span></td><td class="cell-DXvv"><span class="selected-value select-value-color-orange">릭렉스요가</span></td><td class="cell-WwWx"><span class="selected-value select-value-color-default">JM</span></td></tr><tr id="c67888b8-5a3b-403c-9612-1ef4773e4fe6"><td class="cell-title"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%AB%E1%84%91%E1%85%AD%20061789c081b841568bb2433a38e7524c/10%2000-11%2000%20c67888b85a3b403c96121ef4773e4fe6.html">10:00-11:00</a></td><td class="cell-qK&lt;;"><span class="selected-value select-value-color-pink">화요일</span></td><td class="cell-DXvv"><span class="selected-value select-value-color-yellow">마인드풀 요가</span></td><td class="cell-WwWx"><span class="selected-value select-value-color-default">헤주</span></td></tr><tr id="65d88e9d-f438-43c8-9610-5eda65fb127d"><td class="cell-title"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%AB%E1%84%91%E1%85%AD%20061789c081b841568bb2433a38e7524c/11%2000-12%2000%2065d88e9df43843c896105eda65fb127d.html">11:00-12:00</a></td><td class="cell-qK&lt;;"><span class="selected-value select-value-color-pink">화요일</span></td><td class="cell-DXvv"><span class="selected-value select-value-color-pink">아쉬탕가요가</span></td><td class="cell-WwWx"><span class="selected-value select-value-color-default">헤주</span></td></tr><tr id="7823e88d-6c0c-4996-87bf-1b39e61d6546"><td class="cell-title"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%AB%E1%84%91%E1%85%AD%20061789c081b841568bb2433a38e7524c/11%2000-12%2000%207823e88d6c0c499687bf1b39e61d6546.html">11:00-12:00</a></td><td class="cell-qK&lt;;"><span class="selected-value select-value-color-pink">화요일</span></td><td class="cell-DXvv"><span class="selected-value select-value-color-orange">릭렉스요가</span></td><td class="cell-WwWx"><span class="selected-value select-value-color-default">JM</span></td></tr><tr id="16ffc4b0-5ebb-44d7-95b2-781223f32010"><td class="cell-title"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%AB%E1%84%91%E1%85%AD%20061789c081b841568bb2433a38e7524c/10%2000-11%2000%2016ffc4b05ebb44d795b2781223f32010.html">10:00-11:00</a></td><td class="cell-qK&lt;;"><span class="selected-value select-value-color-gray">수요일</span></td><td class="cell-DXvv"><span class="selected-value select-value-color-yellow">마인드풀 요가</span></td><td class="cell-WwWx"><span class="selected-value select-value-color-default">헤주</span></td></tr><tr id="9cf13d11-965f-49d1-8733-ff17497da93f"><td class="cell-title"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%AB%E1%84%91%E1%85%AD%20061789c081b841568bb2433a38e7524c/11%2000-12%2000%209cf13d11965f49d18733ff17497da93f.html">11:00-12:00</a></td><td class="cell-qK&lt;;"><span class="selected-value select-value-color-gray">수요일</span></td><td class="cell-DXvv"><span class="selected-value select-value-color-pink">아쉬탕가요가</span></td><td class="cell-WwWx"><span class="selected-value select-value-color-default">헤주</span></td></tr><tr id="92301001-6a8e-4611-91d0-9ac1bbd421da"><td class="cell-title"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%AB%E1%84%91%E1%85%AD%20061789c081b841568bb2433a38e7524c/11%2000-12%2000%20923010016a8e461191d09ac1bbd421da.html">11:00-12:00</a></td><td class="cell-qK&lt;;"><span class="selected-value select-value-color-gray">수요일</span></td><td class="cell-DXvv"><span class="selected-value select-value-color-orange">릭렉스요가</span></td><td class="cell-WwWx"><span class="selected-value select-value-color-default">JM</span></td></tr><tr id="493b8a5e-bfc3-4f4b-a01f-903bbe01687d"><td class="cell-title"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%AB%E1%84%91%E1%85%AD%20061789c081b841568bb2433a38e7524c/10%2000-11%2000%20493b8a5ebfc34f4ba01f903bbe01687d.html">10:00-11:00</a></td><td class="cell-qK&lt;;"><span class="selected-value select-value-color-brown">목요일</span></td><td class="cell-DXvv"><span class="selected-value select-value-color-yellow">마인드풀 요가</span></td><td class="cell-WwWx"><span class="selected-value select-value-color-default">헤주</span></td></tr><tr id="73580a36-8a65-4f24-976b-6c5ba807afea"><td class="cell-title"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%AB%E1%84%91%E1%85%AD%20061789c081b841568bb2433a38e7524c/11%2000-12%2000%2073580a368a654f24976b6c5ba807afea.html">11:00-12:00</a></td><td class="cell-qK&lt;;"><span class="selected-value select-value-color-brown">목요일</span></td><td class="cell-DXvv"><span class="selected-value select-value-color-pink">아쉬탕가요가</span></td><td class="cell-WwWx"><span class="selected-value select-value-color-default">헤주</span></td></tr><tr id="92952e14-2ebb-40ac-894d-548f479d5aa4"><td class="cell-title"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%AB%E1%84%91%E1%85%AD%20061789c081b841568bb2433a38e7524c/11%2000-12%2000%2092952e142ebb40ac894d548f479d5aa4.html">11:00-12:00</a></td><td class="cell-qK&lt;;"><span class="selected-value select-value-color-brown">목요일</span></td><td class="cell-DXvv"><span class="selected-value select-value-color-orange">릭렉스요가</span></td><td class="cell-WwWx"><span class="selected-value select-value-color-default">JM</span></td></tr><tr id="acdacefd-6674-45e4-93ec-a784861c7538"><td class="cell-title"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%AB%E1%84%91%E1%85%AD%20061789c081b841568bb2433a38e7524c/10%2000-11%2000%20acdacefd667445e493eca784861c7538.html">10:00-11:00</a></td><td class="cell-qK&lt;;"><span class="selected-value select-value-color-green">금요일</span></td><td class="cell-DXvv"><span class="selected-value select-value-color-yellow">마인드풀 요가</span></td><td class="cell-WwWx"><span class="selected-value select-value-color-default">헤주</span></td></tr><tr id="8b1f0ddf-29e0-42d2-a714-4f25fad2f989"><td class="cell-title"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%AB%E1%84%91%E1%85%AD%20061789c081b841568bb2433a38e7524c/11%2000-12%2000%208b1f0ddf29e042d2a7144f25fad2f989.html">11:00-12:00</a></td><td class="cell-qK&lt;;"><span class="selected-value select-value-color-green">금요일</span></td><td class="cell-DXvv"><span class="selected-value select-value-color-pink">아쉬탕가요가</span></td><td class="cell-WwWx"><span class="selected-value select-value-color-default">헤주</span></td></tr><tr id="460046dd-9d0c-450c-b03b-0c73eab2ffff"><td class="cell-title"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%AB%E1%84%91%E1%85%AD%20061789c081b841568bb2433a38e7524c/11%2000-12%2000%20460046dd9d0c450cb03b0c73eab2ffff.html">11:00-12:00</a></td><td class="cell-qK&lt;;"><span class="selected-value select-value-color-green">금요일</span></td><td class="cell-DXvv"><span class="selected-value select-value-color-orange">릭렉스요가</span></td><td class="cell-WwWx"><span class="selected-value select-value-color-default">JM</span></td></tr></tbody></table></div><p id="73e8f5ae-8d25-49ad-b667-70872e050f34" class="">
+</p><h1 id="c418b55a-b706-42fb-9570-3006fabe9a33" class="">멤버십 안내 💰 </h1><div id="2691893b-92a1-4500-8055-251df5761cc9" class="column-list"><div id="3117fe54-d373-4468-96db-ac221c2faa47" style="width:33.333333333333336%" class="column"><blockquote id="ee7b581a-5ff7-4bc2-8029-e6a46b3f8047" class=""><strong>1개월 </strong></blockquote><p id="1d9c6c8a-0da1-4f41-9c5e-e59d4066bacd" class=""><mark class="highlight-orange"><strong><code>주 3회</code></strong></mark> 80,000월 </p><p id="59da5aed-f5e1-48ea-a7f2-312f938e11b1" class=""><mark class="highlight-orange"><strong><code>주 5회</code></strong></mark> 100,000원</p><p id="613e9e28-976e-40de-ac0c-21850e06b2ba" class="">
+</p></div><div id="4f7ce25b-040a-4e12-a6b1-db86a4dbb2ee" style="width:33.333333333333336%" class="column"><blockquote id="65b962cd-8318-413c-9e20-f4a0375407df" class=""><strong>3개월 (-15%)</strong></blockquote><p id="a88c831f-58be-498f-b615-df69a4a042c4" class=""><mark class="highlight-orange"><strong><code>주 3회</code></strong></mark> 200,000월 </p><p id="9b2862fe-2957-4e11-a3df-fd67be614ed4" class=""><mark class="highlight-orange"><strong><code>주 5회</code></strong></mark> 250,000원</p><p id="4d6d0cb2-6db1-45d4-a2af-eb41856d4085" class="">
+</p></div><div id="d2a5074a-8623-4a24-afaf-2b0561a3ff13" style="width:33.33333333333333%" class="column"><blockquote id="384a7073-7f57-4c78-b180-d223554744cb" class=""><strong>1년 회원권 (30%)</strong></blockquote><p id="3d7d0f9b-ad4c-4a5b-9197-4419a1a53779" class=""><mark class="highlight-orange"><strong><code>주 3회</code></strong></mark> 600,000월 </p><p id="bc63bf11-b39a-4b46-a3f3-1d362715df6f" class=""><mark class="highlight-orange"><strong><code>주 5회</code></strong></mark> 800,000원</p><p id="ca2430fa-294f-492f-87d9-c435be93252d" class="">
+</p></div></div><h1 id="48c9bd4f-a3ec-434c-a188-5901afff177e" class="">KT R&amp;D Park 한 번에 이해하기</h1><p id="94410902-61a4-4283-ba0a-6cbab6dd7734" class="">[ Demo Video ]</p><h3 id="db2b251c-e6b1-47b3-97c4-f388fb4f13ff" class="">👀 YOUTUBE</h3><figure id="8bf4bf17-1ee3-4bb3-a55e-782e86109eb7"><a href="https://www.youtube.com/channel/UCwm-I4FBBokTjU0PpU7AhCQ" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">지니버스</div><div class="bookmark-description">Share your videos with friends, family, and the world</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/8a2c1a25/img/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/channel/UCwm-I4FBBokTjU0PpU7AhCQ</div></div><img src="https://yt3.ggpht.com/V6T05V7IQPJjA8hVBlgWs3Xb6dIQzLMZ4KPEyVNtXInITIPL_fUzqp6ZhemmWDeU-CXLFA8D1g=s900-c-k-c0x00ffffff-no-rj" class="bookmark-image"/></a></figure><h1 id="23a94b58-4dd5-4757-b1f2-4a4ce207a871" class="">FAQ </h1><ul id="b46b7eae-637f-47d6-a179-316875681bd4" class="block-color-gray_background toggle"><li><details open=""><summary>다운로드 QR링크가 제대로 동작하지 않아요. </summary><p id="3742e4a6-7933-4e45-9592-f5395a160e8c" class="">아래 url로 다운로드를 시도해주시고, 그래도 다운로드가 안 되시면 아래의 연락처로 연락주세요😎</p><p id="708c6193-328a-4b61-8139-8311fa4393cd" class="">iOS: https://genieverse.co.kr/build/ios
+AOS: https://genieverse.co.kr/build/aos</p></details></li></ul><ul id="a2d0a991-a6e7-409f-9bb9-2dd51d35fbd5" class="block-color-gray_background toggle"><li><details open=""><summary>버그를 발견했어요. 어디로 리포트하면 되나요?</summary><p id="2c05fc8e-45c5-4ed1-afc0-d25a97179f24" class="">지니버스 카카오톡 채널로 보내주세요 😃
+채널은 페이지 위/아래에 안내되고 있습니다. </p></details></li></ul><ul id="512f57b1-d72c-4c70-9a00-ffa232b7e692" class="block-color-gray_background toggle"><li><details open=""><summary>[iOS] ‘신뢰할 수 없는~’라는 안내가 떠요. </summary><figure id="f1e4278e-74d9-4ad4-b5b8-54018e684631" class="image"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/Untitled%204.png"><img style="width:192px" src="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/Untitled%204.png"/></a></figure><p id="6a544f24-5b4c-4bf1-b740-fd6af7784ce2" class="">아래의 순서대로 진행해주세요. </p><ul id="47882260-ffba-4e47-a394-47d61dd95120" class="bulleted-list"><li style="list-style-type:disc">설정\일반\기기관리\’KT’를 신뢰함</li></ul></details></li></ul><p id="0605d3ca-240b-4fc9-bb70-ce530921b1b0" class="">
+</p><p id="52fafafa-1c05-4913-9cff-5a55ed3e332f" class=""><strong>이것만큼은 알고 사용해주셨으면 해요🙂</strong></p><ul id="89671d68-78c6-438d-bca8-dbd1e7eed836" class="bulleted-list"><li style="list-style-type:disc">KT R&amp;D Park는 융합기술원 전 임직원이 함께 만들어가는 공간입니다.</li></ul><ul id="edcabc5a-4762-4c73-a5d6-8344663fa4eb" class="bulleted-list"><li style="list-style-type:disc">추가기능 개발이나 사용성 개선을 위한 잔소리는 겸허히 듣도록 하겠습니다. 연락주세요📱</li></ul><ul id="5fdc85ea-8894-497a-ba94-3e577da136de" class="bulleted-list"><li style="list-style-type:disc">그럴 일은 없으시겠지만, 즐겁고 행복한 공간이 될 수 있도록 서로간의 예절을 지켜주세요🙇🏻‍♀️</li></ul><ul id="ab67c987-01a0-41c5-a9bb-a5ae49ba5ebc" class="bulleted-list"><li style="list-style-type:disc">업무시간에 지나친 앱 사용은 감사합니다.</li></ul><ul id="eaad3149-d87d-4f64-a6ca-da9c0d324a3b" class="bulleted-list"><li style="list-style-type:disc">들숨에 건강을 얻고 날숨에 재력을 얻으시기를 🙏🏼</li></ul><p id="45e7f023-debf-4b9f-b931-16ba7e0be992" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a0c87c20-c548-4993-aa57-3af0fc7cf520"><div style="font-size:1.5em"><span class="icon">⭐</span></div><div style="width:100%">Youtube <mark class="highlight-gray">|</mark> Instagram <mark class="highlight-gray">|</mark> Blog <mark class="highlight-gray">|</mark> Facebook</div></figure><div id="6500cf15-444d-4658-a2c0-f1dc62811ca6" class="column-list"><div id="061d271e-3936-4dab-a0aa-4e98f50d0dfc" style="width:33.333333333333336%" class="column"><h1 id="897fda56-fc7a-4d5b-b624-2b071cf70238" class="">👨🏻‍💻 Contact</h1><p id="5990a2d8-0a0f-4cb1-b74a-9fa68d47623b" class=""><strong>KT 융합기술원 | AI2XL 연구소
+XR/Vision AI P-TF | XR메타버스Project
+
+김동현 전임연구원
+✉️ kim.d-h@kt.com
+📞 010-9888-2988</strong></p><p id="1fa13562-8553-4098-9dcf-4683e1e3242f" class="">
+</p></div><div id="d4355a23-7090-4c3f-9cd6-d508e85e252d" style="width:33.333333333333336%" class="column"><h1 id="b2468bd4-d91c-461d-9be9-3797d28c69f7" class="">채널 URL</h1><figure id="40238885-540b-4eff-b741-3cca9e6fa44c" class="image"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/qrcode_600.png"><img style="width:132px" src="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/qrcode_600.png"/></a></figure><p id="24199d99-08e9-4536-85e3-27e7f1482b07" class=""><a href="http://pf.kakao.com/_xnrPxob">채널 등록 바로가기</a></p></div><div id="3a581daa-d8e6-40cc-89f9-4b733ebb1abd" style="width:33.33333333333333%" class="column"><h1 id="e664ceb5-95b6-437b-b5b9-e9c841c40265" class="">채팅 URL</h1><figure id="b88e568c-1141-45b3-a35f-3bfbe2661f3e" class="image"><a href="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/qrcode_350.png"><img style="width:132px" src="KT%20R&amp;D%20Park%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%208c2eb5e9dcf24efc86adfe151470e9b6/qrcode_350.png"/></a></figure><p id="a19d509e-e1f4-4bda-be95-2382da5b9958" class=""><a href="http://pf.kakao.com/_xnrPxob/chat">채팅 바로가기</a></p></div></div><hr id="5a97f54e-1316-4f0c-8240-d09917d90b33"/><p id="c138edf9-0aae-405c-8758-f70b99d8766e" class="">TedKim © 2022 All Rights Reserved</p><p id="b541b5a3-ef11-4b0e-8c10-b372d724dd40" class="">
+</p></div></article></body></html>
